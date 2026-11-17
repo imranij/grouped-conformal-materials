@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/raw/
+figures/
+results/**/outputs/*.pkl
+results/**/outputs/*.npz
+results/**/outputs/tasks_*/
+results/**/outputs/scored/
