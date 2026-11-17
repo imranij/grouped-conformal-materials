@@ -1,0 +1,20 @@
+
+== concrete: n_test=206, units=160, test rows whose unit is in train=150 (0.728)
+MAE UC-MatReg 3.012 vs XGBoost 3.183; paired diff -0.171 [-0.279,-0.067]; UC better on 120, worse on 86
+RMSE diff -0.212 [-0.319,-0.105]
+  seen n=150: MAE UC 2.854 XGBoost 2.964; cov adaptive 0.947 global 0.967
+  unseen n=56: MAE UC 3.433 XGBoost 3.768; cov adaptive 0.839 global 0.839
+width adaptive/global 0.915 [0.870,0.966] (test-unit resampling only; calibration draw not resampled)
+coverage adaptive-global -0.0146 [-0.0433,+0.0052]; adaptive-only covered 1, global-only covered 4
+HINDSIGHT equal-coverage constant width 14.15 vs adaptive mean 14.56: ratio 1.029
+unseen-unit adaptive coverage 47/56
+
+== superconductivity: n_test=4253, units=3714, test rows whose unit is in train=1497 (0.352)
+MAE UC-MatReg 4.948 vs Extra trees 4.843; paired diff +0.104 [+0.057,+0.149]; UC better on 1843, worse on 2410
+RMSE diff -0.124 [-0.221,-0.024]
+  seen n=1497: MAE UC 4.852 Extra trees 4.978; cov adaptive 0.919 global 0.923
+  unseen n=2756: MAE UC 4.999 Extra trees 4.770; cov adaptive 0.920 global 0.923
+width adaptive/global 0.778 [0.750,0.807] (test-unit resampling only; calibration draw not resampled)
+coverage adaptive-global -0.0033 [-0.0130,+0.0061]; adaptive-only covered 173, global-only covered 187
+HINDSIGHT equal-coverage constant width 29.97 vs adaptive mean 23.80: ratio 0.794
+unseen-unit adaptive coverage 2536/2756

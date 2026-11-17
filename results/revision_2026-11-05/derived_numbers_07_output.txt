@@ -1,0 +1,37 @@
+== grouped5 concrete: rows=1030 units=428 folds=5
+  cov_a=0.9049 cov_c=0.9146 width_a=19.320 width_c=20.571 ratio=0.9392
+  Spearman(width_a, |err|) pooled = 0.239 (p=8e-15)
+  Spearman per fold/unit: min 0.119 max 0.439
+  MAE stack=4.153 rival=4.017 rival_fitset=4.189
+== row5 concrete: rows=1030 units=428 folds=5
+  cov_a=0.9000 cov_c=0.9107 width_a=14.938 width_c=15.585 ratio=0.9585
+  Spearman(width_a, |err|) pooled = 0.211 (p=8.8e-12)
+  Spearman per fold/unit: min 0.139 max 0.235
+  MAE stack=3.235 rival=2.794 rival_fitset=3.223
+== grouped5 superconductivity: rows=21263 units=15309 folds=5
+  cov_a=0.8944 cov_c=0.8981 width_a=25.248 width_c=30.127 ratio=0.8381
+  Spearman(width_a, |err|) pooled = 0.601 (p=0)
+  Spearman per fold/unit: min 0.581 max 0.619
+  MAE stack=5.785 rival=5.236 rival_fitset=5.708
+  fam Cuprate: rows=10099 units=7159 cov_a=0.878 cov_c=0.820 width_a=38.00 width_c=30.12 MAE=8.74 spearman=0.355
+  fam Iron-based: rows=1747 units=1239 cov_a=0.864 cov_c=0.930 width_a=21.92 width_c=30.13 MAE=5.33 spearman=0.341
+  fam MgB2-type: rows=336 units=187 cov_a=0.771 cov_c=0.836 width_a=21.66 width_c=30.43 MAE=6.98 spearman=0.555
+  fam Other: rows=9081 units=6724 cov_a=0.923 cov_c=0.981 width_a=11.84 width_c=30.13 MAE=2.54 spearman=0.489
+== row5 superconductivity: rows=21263 units=15309 folds=5
+  cov_a=0.8938 cov_c=0.8953 width_a=23.314 width_c=27.674 ratio=0.8425
+  Spearman(width_a, |err|) pooled = 0.634 (p=0)
+  Spearman per fold/unit: min 0.607 max 0.658
+  MAE stack=5.450 rival=4.957 rival_fitset=5.323
+  fam Cuprate: rows=10099 units=7159 cov_a=0.874 cov_c=0.807 width_a=36.34 width_c=27.66 MAE=8.55 spearman=0.387
+  fam Iron-based: rows=1747 units=1239 cov_a=0.853 cov_c=0.936 width_a=19.19 width_c=27.68 MAE=4.67 spearman=0.303
+  fam MgB2-type: rows=336 units=187 cov_a=0.878 cov_c=0.952 width_a=17.21 width_c=27.71 MAE=4.44 spearman=0.404
+  fam Other: rows=9081 units=6724 cov_a=0.925 cov_c=0.983 width_a=9.85 width_c=27.68 MAE=2.20 spearman=0.501
+== lofo superconductivity: rows=21263 units=15309 folds=4
+  cov_a=0.5387 cov_c=0.4260 width_a=34.062 width_c=23.723 ratio=1.4358
+  Spearman(width_a, |err|) pooled = 0.284 (p=0)
+  Spearman per fold/unit: min -0.028 max 0.524
+  MAE stack=18.728 rival=18.942 rival_fitset=19.128
+  fam Cuprate: rows=10099 units=7159 cov_a=0.458 cov_c=0.146 width_a=37.40 width_c=11.44 MAE=22.37 spearman=0.185
+  fam Iron-based: rows=1747 units=1239 cov_a=0.254 cov_c=0.590 width_a=11.85 width_c=31.46 MAE=15.55 spearman=-0.028
+  fam MgB2-type: rows=336 units=187 cov_a=0.116 cov_c=0.149 width_a=12.25 width_c=27.28 MAE=24.75 spearman=0.015
+  fam Other: rows=9081 units=6724 cov_a=0.699 cov_c=0.716 width_a=35.43 width_c=35.77 MAE=15.06 spearman=0.524
