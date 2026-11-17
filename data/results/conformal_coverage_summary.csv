@@ -1,0 +1,3 @@
+dataset,n_test,nominal_coverage,empirical_coverage,mean_interval_width
+concrete,206,0.9,0.9174757281553398,14.556552110285558
+superconductivity,4253,0.9,0.9198213026099225,23.80472486040522

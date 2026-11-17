@@ -1,0 +1,5 @@
+dataset,interval_method,n_test,nominal_coverage,empirical_coverage,mean_interval_width,width_vs_adaptive
+concrete,Adaptive,206,0.9,0.9174757281553398,14.556552110285558,1.0
+concrete,Global,206,0.9,0.9320388349514563,15.913045404920595,1.093187815655642
+superconductivity,Adaptive,4253,0.9,0.9198213026099225,23.80472486040522,1.0
+superconductivity,Global,4253,0.9,0.9231130966376675,30.577949790666604,1.2845327963242876
