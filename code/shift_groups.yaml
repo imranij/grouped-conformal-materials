@@ -1,0 +1,53 @@
+# Pre-registered strata for the Phase-1 stratified-coverage analysis.
+# Written 2026-09-08 BEFORE any stratified result was computed (plan Sec. 7, step 5).
+# No stratum defined here may be added, merged or dropped after results are seen.
+# A stratum below the size floor is reported as too small, not removed.
+#
+# Size floor: 100 records (superconductivity), 60 records (concrete).
+# All strata are evaluated on the 4,459 intervals already in
+# data/results/conformal_intervals.csv (206 concrete + 4,253 superconductivity),
+# which are row-aligned with the deterministic train_test_split(test_size=0.20,
+# random_state=42) test split of each dataset.
+
+target_z_strata:
+  # |z| of the TRUE target value, standardised with the mean and standard
+  # deviation of the TRAINING split target only (no test information used).
+  # Same three bins as the sibling conformal paper.
+  definition: "z = (y_true - mean(y_train)) / std(y_train)"
+  bins:
+    - name: "|z| <= 1"
+      rule: "abs(z) <= 1"
+    - name: "1 < |z| <= 2"
+      rule: "1 < abs(z) <= 2"
+    - name: "|z| > 2"
+      rule: "abs(z) > 2"
+
+superconductivity_chemistry_families:
+  # Element fractions come from data/raw/superconductivity/unique_m.csv, which is
+  # row-aligned with train.csv (identical critical_temp column, 21,263 rows).
+  # Rules are applied in the order listed; the first match wins, so the families
+  # are mutually exclusive and cover every test row.
+  source: "data/raw/superconductivity/unique_m.csv"
+  families:
+    - name: "Cuprate"
+      rule: "Cu > 0 and O > 0 and Fe == 0"
+    - name: "Iron-based"
+      rule: "Fe > 0 and (As > 0 or Se > 0 or P > 0 or S > 0)"
+    - name: "MgB2-type"
+      rule: "Mg > 0 and B > 0"
+    - name: "Other"
+      rule: "everything not matched above"
+
+concrete_process_strata:
+  # Curing age is the natural process axis of the concrete dataset.
+  source: "Age_day column of the concrete design matrix"
+  bins:
+    - name: "Age <= 28 d"
+      rule: "Age_day <= 28"
+    - name: "Age > 28 d"
+      rule: "Age_day > 28"
+
+applicability_domain_quintiles:
+  # Re-evaluation of the manuscript's existing Q1-Q5 bins, unchanged in
+  # definition, with exact binomial confidence intervals added.
+  definition: "quintiles of the mean distance to the 10 nearest training rows in standardised descriptor space"
